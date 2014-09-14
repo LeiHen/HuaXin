@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="Keywords" content="">
+		<meta name="description" content="">
+		<title>华信</title>
+		<!--[if lt IE 9 ]>
+            <script src="js/hack/html5shiv.js"></script>
+        <![endif]-->
+        
+<!--        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>-->
+        
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/page.css">
+		<link rel="stylesheet" href="css/font.css">
+		
+	</head>
+	<body>	
+		<!-- 导航[[ -->
+        <nav id="mianNav" class="nav nav_mini">
+            <div class="logo_wrap">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" align='absmiddle'  alt="LOGO"  title='LOGO'>
+                </a>
+            </div>
+            <ul class="mian_nav">
+                <li><a href="index.html"><span class="icon_home" title="首页"></span>首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                <li><a href="product.html"><span class="icon_shop" title="产品展示"></span>产品展示</a></li>
+                <li><a href="news.html"><span class="icon_news" title="资讯中心"></span>资讯中心</a></li>
+                <li><a href="contact.html"><span class="icon_contacts" title="联系我们"></span>联系我们</a></li>
+                <li><a href="about.html"><span class="icon_about" title="关于我们"></span>关于我们</a></li>
+            </ul>
+            <ul class="share_nav">
+                <li><a href="#"><span class="icon_weibo"></span></a></li>
+                <li><a href="#"><span class="icon_renren"></span></a></li>
+                <li><a href="#"><span class="icon_douban"></span></a></li>
+            </ul>
+            <div id="shrinkNavBtn" class="btn_contraction" title="收缩"><span class="icon_left"></span></div>
+        </nav>
+		<!-- 导航]] -->
+       
+       <!-- 头部[[ -->
+       <header class="header header_sub contact_head header_ext">
+           <h1 class="sub_title1">联系我们</h1>
+           <h2 class="sub_title2">欢迎联系我们，互惠互赢！</h2>
+       </header>
+       <!-- 头部]] -->
+       
+       
+        <!-- 内容[[ -->
+        <div class="content content_contact content_ext">
+           <div id="dituContent" class="map"></div>
+           <div class="contact_info">
+               <div class="email">
+                   <h1 class="title">ieasy global</h1>
+                   <p class="address">邮箱：<a class="mailto" href="mailto:sales@ieasyglobal.com" title='发送邮件' alt="sales@ieasyglobal.com">sales@ieasyglobal.com</a></p>
+               </div>
+               <div class="phone">
+                   <h1 class="title"><span></span>联系电话</h1>
+                   <ul class="phone_info">
+                       <li>江先生：13922443683</li>
+                       <li>谭小姐：15902045600</li>
+                   </ul>
+               </div>
+               <div class="site">联系地址：<span>广东省鹤山市共和镇新兴路305-306号</span></div>
+
+<!--               <a class="btn_leave_word">留言给我<span></span></a>-->
+               
+               <div class="mob_btn_dynamic mb20">
+                    <a class="dynamic_btn">留言<span class="icon_right icon_sapn"></span></a>
+                    <span class="line_top"></span>
+                    <span class="line_right"></span>
+                    <span class="line_botton"></span>
+                    <span class="line_left"></span>
+               </div>
+               
+           </div>
+        </div>
+		<!-- 内容]] -->
+       
+        
+        
+        
+        
+        <!-- 导航[[ -->
+             
+		<!-- 导航]] -->
+       
+       
+       
+        <!-- 页脚[[ -->
+        <footer class="footer footer_ext">
+            <div class="slogan">
+                <img src="images/logo.png" class="logo" alt="logo" title="logo">
+                <span class="txt_en">I-EASY GLOBAL</span>
+                <span class="txt_ch">我的创意设计，你的简易生活</span>
+            </div>
+            <div class="copyright">
+                <span class="name">COPYRIGTH BY 华信金属制品有限公司</span>
+                <div class="nav_bottom">
+                   <a href="about.html">关于我们</a>
+                   <a href="product.html">产品展示</a>
+                   <a href="news.html">质量承诺</a>
+                   <a href="contact.html">联系我们</a>
+                   <a href="news.html">疑问解答</a>
+                   <a href="news.html">新闻资讯</a>
+                </div>
+            </div>
+        </footer>
+		<!-- 页脚]] -->
+        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+        <script src="js/base.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/page.js"></script>
+		<script type="text/javascript">	
+			//初始化 统一入口
+			function init(){
+                //侧导航扩展收缩
+                shrinkNav();
+                
+                //创建和初始化地图
+                initMap();
+			}
+			init();
+		</script>
+		
+		<!-- css3兼容低版本 -->
+		<!--[if lt IE 9]>
+        <script type="text/javascript" src="js/hack/PIE/PIE.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                if (window.PIE) {
+                    $('.rounded').each(function() {
+                        PIE.attach(this);
+                    });    
+                }
+            });
+        </script>
+        <![endif]-->
+        
+        <!-- 兼容ie7字体图标 -->
+        <!--[if lt IE 8]>
+		    <script src="js/hack/hack_ie7_font.js"></script>
+		<![endif]-->
+	</body>
+</html>
