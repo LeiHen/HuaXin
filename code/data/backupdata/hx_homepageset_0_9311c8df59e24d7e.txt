@@ -1,0 +1,1 @@
+INSERT INTO `hx_homepageset` VALUES('default/index.htm','../index.html','0');

@@ -346,6 +346,7 @@
 	background-color: #fff;
 	position: absolute;
 	bottom: -1px;
+	+bottom: 4px;
 	left: 0px;
 }
 .parameter_l .parameter_content .list .txt{
@@ -396,14 +397,15 @@
 	float: right;
 	font-size: 4em;
 	padding: 2em 18px 0 0;
-	/*min-width: 612px;*/
+	min-width: 580px;
 }
 .parameter_r .list{
- 	max-width: 300px;
+ 	max-width: 260px;
  	display: inline-block;
  	+display: inline;
  	+zoom: 1;
  	margin: 0 30px 0 0;
+ 	vertical-align: top;
 }
 .parameter_r .list .title{
 	line-height: 1.5em;
