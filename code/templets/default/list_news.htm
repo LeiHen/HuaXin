@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:global.cfg_description/}" />
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  {dede:include filename="head_init.htm"/}
+
+</head>
+<body>
+{dede:include filename="nav.htm"/}
+
+<!-- 头部[[ -->
+<header class="header header_sub news_head header_ext">
+   <h1 class="sub_title1">疑问解答</h1>
+   <h2 class="sub_title2">疑难问题，提出来，我们提供最新最佳的产品信息</h2>
+</header>
+<!-- 头部]] -->
+
+
+<!-- 内容[[ -->
+<div class="content news_content content_ext">
+   <ul class="news_nav">
+      {dede:channel type='sun'}
+      <li class="list">[field:typename/]</li>
+      {/dede:channel}
+       <!-- <li class="list pitch_on">疑问解答</li>
+       <li class="list">行业资讯</li> -->
+   </ul>
+   
+   <div class="clear"></div>
+   
+   <div class="news_info">
+       <ul class="news_detail block">
+          {dede:arclist row="10" typeid="5"}
+          <li class="news_list">
+             <time class="time">[field:pubdate function=MyDate('y-m-d',@me)/]</time>
+             <h1 class="title">[field:title/]</h1>
+             <a href="[field:arcurl/]" class="more">查看更多<span class="icon_right"></span></a>
+             <span class="line_bottom"></span>
+          </li>
+          {/dede:arclist}
+
+            <li class="news_page">
+                <a href="#"><span class="icon_left"></span></a>
+                <a href="#"><span class="icon_right"></span></a>
+            </li>
+       </ul>
+       
+       <ul class="news_detail">
+            {dede:arclist row="10" typeid="6"}
+            <li class="news_list">
+               <time class="time">[field:pubdate function=MyDate('y-m-d',@me)/]</time>
+               <h1 class="title">[field:title/]</h1>
+               <a href="[field:arcurl/]" class="more">查看更多<span class="icon_right"></span></a>
+               <span class="line_bottom"></span>
+            </li>
+            {/dede:arclist}
+            
+            <li class="news_page">
+                <a href="#"><span class="icon_left"></span></a>
+                <a href="#"><span class="icon_right"></span></a>
+            </li>
+       </ul>
+
+   </div>
+   
+</div>
+<!-- 内容]] -->
+
+{dede:include filename="footer.htm"/}
+<script type="text/javascript"> 
+  //初始化 统一入口
+  function init_current(){
+    $('.news_nav .list:eq(0)').addClass('pitch_on');
+    //新闻切换
+    listCut();
+
+  }
+  init_current();
+</script>
+
+</body>
+</html>

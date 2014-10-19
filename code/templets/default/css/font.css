@@ -1,0 +1,66 @@
+@font-face {
+	font-family: 'custom';
+	src:url('../fonts/custom.eot?ekca76');
+	src:url('../fonts/custom.eot?#iefixekca76') format('embedded-opentype'),
+		url('../fonts/custom.woff?ekca76') format('woff'),
+		url('../fonts/custom.ttf?ekca76') format('truetype'),
+		url('../fonts/custom.svg?ekca76#custom') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon_"], [class*=" icon_"] {
+	font-family: 'custom';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon_home:before {
+	content: "\e600";
+}
+.icon_shop:before {
+	content: "\e601";
+}
+.icon_news:before {
+	content: "\e602";
+}
+.icon_contacts:before {
+	content: "\e603";
+}
+.icon_about:before {
+	content: "\e604";
+}
+
+
+.icon_weibo:before {
+	content: "\e640";
+}
+.icon_renren:before {
+	content: "\e641";
+}
+.icon_douban:before {
+	content: "\e642";
+}
+
+
+.icon_top:before {
+	content: "\e650";
+}
+.icon_right:before {
+	content: "\e651";
+}
+.icon_bottom:before {
+	content: "\e652";
+}
+.icon_left:before {
+	content: "\e653";
+}

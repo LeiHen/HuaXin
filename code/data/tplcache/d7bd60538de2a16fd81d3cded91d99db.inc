@@ -1,0 +1,1 @@
+<li><a href="[field:typeurl/]"><span class="icon_news" title="[field:typename/]"></span>[field:typename/]</a></li>

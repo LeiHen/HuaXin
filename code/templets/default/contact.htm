@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:global.cfg_description/}" />
+  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  {dede:include filename="head_init.htm"/}
+
+</head>
+<body>
+{dede:include filename="nav.htm"/}
+
+<!-- 头部[[ -->
+<header class="header header_sub contact_head header_ext">
+   <h1 class="sub_title1">{dede:field.typename/}</h1>
+   <h2 class="sub_title2">欢迎联系我们，互惠互赢！</h2>
+</header>
+<!-- 头部]] -->
+
+
+<!-- 内容[[ -->
+<div class="content content_contact content_ext">
+   <div id="dituContent" class="map"></div>
+   <div class="contact_info">
+       <div class="email">
+           <h1 class="title">ieasy global</h1>
+           <p class="address">邮箱：<a class="mailto" href="mailto:sales@ieasyglobal.com" title='发送邮件' alt="sales@ieasyglobal.com">sales@ieasyglobal.com</a></p>
+       </div>
+       <div class="phone">
+           <h1 class="title"><span></span>联系电话</h1>
+           <ul class="phone_info">
+               <li>江先生：13922443683</li>
+               <li>谭小姐：15902045600</li>
+           </ul>
+       </div>
+       <div class="site">联系地址：<span>广东省鹤山市共和镇新兴路305-306号</span></div>
+
+<!--               <a class="btn_leave_word">留言给我<span></span></a>-->
+       
+       <div class="mob_btn_dynamic mb20">
+            <a class="dynamic_btn">留言<span class="icon_right icon_sapn"></span></a>
+            <span class="line_top"></span>
+            <span class="line_right"></span>
+            <span class="line_botton"></span>
+            <span class="line_left"></span>
+       </div>
+       
+   </div>
+</div>
+<!-- 内容]] -->
+
+{dede:include filename="footer.htm"/}
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<script type="text/javascript"> 
+  //初始化 统一入口
+  function init_current(){
+    //创建和初始化地图
+    initMap();
+  }
+  init_current();
+</script>
+
+</body>
+</html>

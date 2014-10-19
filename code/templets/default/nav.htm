@@ -1,0 +1,42 @@
+<!-- 导航[[ -->
+<nav id="mianNav" class="nav nav_mini">
+    <div class="logo_wrap">
+        <a href="index.html" class="logo">
+            <img src="{dede:global.cfg_templets_skin/}/images/logo.png" align='absmiddle'  alt="LOGO"  title='LOGO'>
+        </a>
+    </div>
+    <ul class="mian_nav"> 
+        <li><a href="{dede:global.cfg_cmsurl/}/"><span class="icon_home" title="首页"></span>{dede:global.cfg_indexname/}</a></li>
+        {dede:type typeid="1"}
+        <li><a href="[field:typeurl/]"><span class="icon_shop" title="[field:typename/]"></span>[field:typename/]</a></li>
+        {/dede:type}
+        {dede:type typeid="2"}
+        <li><a href="[field:typeurl/]"><span class="icon_news" title="[field:typename/]"></span>[field:typename/]</a></li>
+        {/dede:type}
+        {dede:type typeid="3"}
+        <li><a href="[field:typeurl/]"><span class="icon_contacts" title="[field:typename/]"></span>[field:typename/]</a></li>
+        {/dede:type}
+        {dede:type typeid="4"}
+        <li><a href="[field:typeurl/]"><span class="icon_about" title="[field:typename/]"></span>[field:typename/]</a></li>
+        {/dede:type}
+
+
+        <!-- {dede:channel type='top' typeid="2" row="1"}
+            <li><a href="[field:typeurl/]"><span class="icon_news" title="[field:typename/]"></span>[field:typename/]</a></li>
+        {/dede:channel}
+        {dede:channel type='top' typeid="3" row="1"}
+            <li><a href="[field:typeurl/]"><span class="icon_contacts" title="[field:typename/]"></span>[field:typename/]</a></li>
+        {/dede:channel}
+        {dede:channel type='top' typeid="4" row="1"}
+            <li><a href="[field:typeurl/]"><span class="icon_about" title="[field:typename/]"></span>[field:typename/]</a></li>
+        {/dede:channel} -->
+
+    </ul>
+    <ul class="share_nav">
+        <li><a href="#"><span class="icon_weibo"></span></a></li>
+        <li><a href="#"><span class="icon_renren"></span></a></li>
+        <li><a href="#"><span class="icon_douban"></span></a></li>
+    </ul>
+    <div id="shrinkNavBtn" class="btn_contraction" title=""><span class="icon_right"></span></div>
+</nav>
+<!-- 导航]] -->

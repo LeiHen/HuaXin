@@ -1,15 +1,56 @@
+<!-- 页脚[[ -->
+<footer class="footer footer_ext">
+    <div class="slogan">
+        <img src="{dede:global.cfg_templets_skin/}/images/logo.png" class="logo" alt="logo" title="logo">
+        <span class="txt_en">I-EASY GLOBAL</span>
+        <span class="txt_ch">我的创意设计，你的简易生活</span>
+    </div>
+    <div class="copyright">
+        <span class="name">{dede:global.cfg_powerby/}</span>
+        <div class="nav_bottom">
+        <a href="{dede:global.cfg_cmsurl/}">{dede:global.cfg_indexname/}</a>
+        {dede:channel type='top' }
+        <a href="[field:typeurl/]">[field:typename/]</a>
+        {/dede:channel}
 
-<!-- //底部模板 -->
-<div class="footer w960 center mt1 clear">
-	<!-- 
-		为了支持织梦团队的发展,请您保留织梦内容管理系统的链接信息.
-		我们对支持织梦团队发展的朋友表示真心的感谢!织梦因您更精彩!
-	-->
-    <div class="footer_left"></div>
-    <div class="footer_body">
-	<p class="powered">    
-		Powered by <a href="http://www.dedecms.com" title="织梦内容管理系统(DedeCms)--国内最专业的PHP网站管理系统，轻松建站的首选利器。" target="_blank"><strong>DedeCMS_{dede:global.cfg_version/}</strong></a> &copy; 2004-2011 <a href="http://www.desdev.cn/" target="_blank">DesDev</a> Inc.<br /><div class="copyright">{dede:global.cfg_powerby/}&nbsp;&nbsp;{dede:global.cfg_beian/}</div></p>        
-<!-- /powered -->
-   </div>
-   <div class="footer_right"></div>
-</div>
+           <!--<a href="about.html">关于我们</a>
+           <a href="product.html">产品展示</a>
+           <a href="news.html">质量承诺</a>
+           <a href="contact.html">联系我们</a>
+           <a href="news.html">疑问解答</a>
+           <a href="news.html">新闻资讯</a>-->
+        </div>
+    </div>
+</footer>
+<!-- 页脚]] -->
+
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/base.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/js/common.js"></script>
+<script src="{dede:global.cfg_templets_siin/}/js/page.js"></script>
+<script type="text/javascript">	
+	//初始化 统一入口
+	function init(){
+        shrinkNav();
+	}
+	init();
+</script>
+
+<!-- css3兼容低版本 -->
+<!--[if lt IE 9]>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/hack/PIE/PIE.js"></script>
+<script type="text/javascript">
+    $(function() {
+        if (window.PIE) {
+            $('.rounded').each(function() {
+                PIE.attach(this);
+            });    
+        }
+    });
+</script>
+<![endif]-->
+
+<!-- 兼容ie7字体图标 -->
+<!--[if lt IE 8]>
+    <script src="{dede:global.cfg_templets_skin/}/js/hack/hack_ie7_font.js"></script>
+<![endif]-->

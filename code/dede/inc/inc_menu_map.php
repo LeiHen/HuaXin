@@ -10,7 +10,7 @@
  */
 require_once(dirname(__FILE__)."/../config.php");
 
-$maparray = array(1=>'文档相关',2=>'系统设置',3=>'必须辅助功能',4=>'网站更新操作',5=>'会员相关',6=>'基本模块插件');
+$maparray = array(1=>'文档相关',2=>'系统设置',3=>'必须辅助功能',4=>'网站更新操作',6=>'基本模块插件');
 
 //载入可发布频道
 $addset = '';
@@ -64,13 +64,7 @@ $menusMain = "
   <m:item name='自定义表单' link='diy_main.php' rank='c_List' target='main' />
 </m:top>
 
-<m:top mapitem='3' item='3_' name='采集管理' display='none' rank='co_NewRule,co_ListNote,co_ViewNote,co_Switch,co_GetOut'>
-  <m:item name='采集节点管理' link='co_main.php' rank='co_ListNote' target='main' />
-  <m:item name='临时内容管理' link='co_url.php' rank='co_ViewNote' target='main' />
-  <m:item name='导入采集规则' link='co_get_corule.php' rank='co_GetOut' target='main'/>
-  <m:item name='监控采集模式' link='co_gather_start.php' rank='co_GetOut' target='main'/>
-  <m:item name='采集未下载内容' link='co_do.php?dopost=coall' rank='co_GetOut' target='main'/>
-</m:top>
+
 
 <m:top mapitem='3' item='1_3_3' name='批量维护' display='block'>
   <m:item name='更新系统缓存' link='sys_cache_up.php' rank='sys_ArcBatch' target='main' />
@@ -103,16 +97,7 @@ $menusMain = "
   <m:item name='文件式管理器' link='media_main.php?dopost=filemanager' rank='plus_文件管理器' target='main' />
 </m:top>
 
-<m:top mapitem='5' item='6_' name='会员管理' display='none' rank='member_List,member_Type'>
-  <m:item name='注册会员列表' link='member_main.php' rank='member_List' target='main' />
-  <m:item name='会员级别设置' link='member_rank.php' rank='member_Type' target='main' />
-  <m:item name='积分头衔设置' link='member_scores.php' rank='member_Type' target='main' />
-  <m:item name='会员模型管理' link='member_model_main.php' rank='member_Type' target='main' />
-  <m:item name='会员短信管理' link='member_pm.php' rank='member_Type' target='main' />
-  <m:item name='会员留言管理' link='member_guestbook.php' rank='member_Type' target='main' />
-  <m:item name='会员动态管理' link='member_info_main.php?type=feed' rank='member_Type' target='main' />
-  <m:item name='会员心情管理' link='member_info_main.php?type=mood' rank='member_Type' target='main' />
-</m:top>
+
 
 <m:top mapitem='2' item='10_' name='系统设置' display='none' rank='sys_User,sys_Group,sys_Edit,sys_Log,sys_Data'>
   <m:item name='系统基本参数' link='sys_info.php' rank='sys_Edit' target='main' />
@@ -134,15 +119,7 @@ $menusMain = "
   <m:item name='系统错误修复[S]' link='sys_repair.php' rank='sys_verify' target='main' />
 </m:top>
 
-<m:top mapitem='5' item='10_6_' name='支付工具' display='none' rank='sys_Data'>
-  <m:item name='点卡产品分类' link='cards_type.php' rank='sys_Data' target='main' />
-  <m:item name='点卡产品管理' link='cards_manage.php' rank='sys_Data' target='main' />
-  <m:item name='会员产品分类' link='member_type.php' rank='sys_Data' target='main' />
-  <m:item name='会员消费记录' link='member_operations.php' rank='sys_Data' target='main' />
-  <m:item name='商店订单记录' link='shops_operations.php' rank='sys_Data' target='main' />
-  <m:item name='支付接口设置' link='sys_payment.php' .php' rank='sys_Data' target='main' />
-  <m:item name='配货方式设置' link='shops_delivery.php' rank='sys_Data' target='main' />
-</m:top>
+
 
 <m:top mapitem='2' item='10_7_' name='模板管理' display='none' rank='temp_One,temp_Other,temp_MyTag,temp_test,temp_All'>
   <m:item name='默认模板管理' link='templets_main.php' rank='temp_All' target='main'/>
@@ -153,6 +130,39 @@ $menusMain = "
 </m:top>
 
 ";
+
+// <m:top mapitem='3' item='3_' name='采集管理' display='none' rank='co_NewRule,co_ListNote,co_ViewNote,co_Switch,co_GetOut'>
+//   <m:item name='采集节点管理' link='co_main.php' rank='co_ListNote' target='main' />
+//   <m:item name='临时内容管理' link='co_url.php' rank='co_ViewNote' target='main' />
+//   <m:item name='导入采集规则' link='co_get_corule.php' rank='co_GetOut' target='main'/>
+//   <m:item name='监控采集模式' link='co_gather_start.php' rank='co_GetOut' target='main'/>
+//   <m:item name='采集未下载内容' link='co_do.php?dopost=coall' rank='co_GetOut' target='main'/>
+// </m:top>
+
+// <m:top mapitem='5' item='10_6_' name='支付工具' display='none' rank='sys_Data'>
+//   <m:item name='点卡产品分类' link='cards_type.php' rank='sys_Data' target='main' />
+//   <m:item name='点卡产品管理' link='cards_manage.php' rank='sys_Data' target='main' />
+//   <m:item name='会员产品分类' link='member_type.php' rank='sys_Data' target='main' />
+//   <m:item name='会员消费记录' link='member_operations.php' rank='sys_Data' target='main' />
+//   <m:item name='商店订单记录' link='shops_operations.php' rank='sys_Data' target='main' />
+//   <m:item name='支付接口设置' link='sys_payment.php' .php' rank='sys_Data' target='main' />
+//   <m:item name='配货方式设置' link='shops_delivery.php' rank='sys_Data' target='main' />
+// </m:top>
+
+
+// <m:top mapitem='5' item='6_' name='会员管理' display='none' rank='member_List,member_Type'>
+//   <m:item name='注册会员列表' link='member_main.php' rank='member_List' target='main' />
+//   <m:item name='会员级别设置' link='member_rank.php' rank='member_Type' target='main' />
+//   <m:item name='积分头衔设置' link='member_scores.php' rank='member_Type' target='main' />
+//   <m:item name='会员模型管理' link='member_model_main.php' rank='member_Type' target='main' />
+//   <m:item name='会员短信管理' link='member_pm.php' rank='member_Type' target='main' />
+//   <m:item name='会员留言管理' link='member_guestbook.php' rank='member_Type' target='main' />
+//   <m:item name='会员动态管理' link='member_info_main.php?type=feed' rank='member_Type' target='main' />
+//   <m:item name='会员心情管理' link='member_info_main.php?type=mood' rank='member_Type' target='main' />
+// </m:top>
+
+
+
 
 //载入插件菜单
 $plusset = '';

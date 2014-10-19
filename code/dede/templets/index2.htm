@@ -9,7 +9,7 @@
 <script src="js/frame.js" language="javascript" type="text/javascript"></script>
 <link href="images/style<?php echo $cfg_admin_skin;?>/style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-#skinlist {
+/*#skinlist {
     display: block;
     height: 11px;
 	margin-top: 10px;
@@ -24,8 +24,8 @@
     float: left;
     height: 11px;
     width: 14px;
-}
-#def div, #s1 div, #s2 div, #s3 div, #s4 div{
+}*/
+/*#def div, #s1 div, #s2 div, #s3 div, #s4 div{
     background-image: url("images/skinbutton.png");
     background-repeat: no-repeat;
 }
@@ -52,7 +52,7 @@
 }
 #s4 div.sel {
     background: url("images/skinbutton.png") no-repeat scroll -14px -33px transparent;
-}
+}*/
 </style>
 </head>
 <body class="showmenu">
@@ -75,9 +75,9 @@
         <!-- <li><a href="index_menu.php" target="menu">主菜单</a></li> -->
         <li><a href="#" onclick="JumpFrame('catalog_menu.php','public_guide.php');">内容发布</a></li>
         <!-- <li><a href="#" onclick="JumpFrame('index_menu.php','content_list.php');">内容维护</a></li> -->
-        <!-- <li><a href="#" onclick="JumpFrame('index_menu.php','index_body.php');">系统主页</a></li> -->
+        <li><a href="#" onclick="JumpFrame('index_menu.php','index_body.php');">系统主页</a></li>
         <li><a href="../index.php?upcache=1" target="_blank">网站主页</a></li>
-        <li><a href="../member" target="_blank">会员中心</a></li>
+        <!-- <li><a href="../member" target="_blank">会员中心</a></li> -->
         <li><a href="exit.php" target="_top">注销</a></li>
       </ul>
       <!-- <div class="quick"> <a href="#" class="ac_qucikmenu" id="ac_qucikmenu">快捷方式</a> <a href="#" class="ac_qucikadd" id="ac_qucikadd">
@@ -158,39 +158,39 @@ function JumpFrame(url1, url2){
     jQuery('#menufra').get(0).src = url1;
     jQuery('#main').get(0).src = url2;
 }
-(function($)
-{
- 	$("#skinlist>li").click(function()
-	 {
-		 var adminskin = $(this).index() + 1;
-		 var csshref = "images/style"+adminskin+"/style.css";
-		 $("#skinlist>li").each(function(){$(this).children('div').attr('class', '')});
-		 $("#topdedelogo").attr('src', 'images/style'+adminskin+'/admin_top_logo.gif')
-		 $('link').each(function()
-		 {
-			 if($(this).attr('href').match(/style.css$/))
-			 {
-				 $(this).attr('href',csshref);
-			 }
-		 });
-		 $(this).children('div').attr('class', 'sel');
-		 $(window.frames["menu"].document).find("link").each(function()
-		 {
-			 if($(this).attr('href').match(/style.css$/))
-			 {
-				 $(this).attr('href',csshref);
-			 }
-		 });
-		 $(window.frames["main"].document).find("link").each(function()
-		 {
-			 if($(this).attr('href').match(/style.css$/))
-			 {
-				 $(this).attr('href',csshref);
-			 }
-		 });
-		 $.get('index_body.php?dopost=setskin&cskin='+adminskin);
-	 });
-})(jQuery);
+// (function($)
+// {
+//  	$("#skinlist>li").click(function()
+// 	 {
+// 		 var adminskin = $(this).index() + 1;
+// 		 var csshref = "images/style"+adminskin+"/style.css";
+// 		 $("#skinlist>li").each(function(){$(this).children('div').attr('class', '')});
+// 		 $("#topdedelogo").attr('src', 'images/style'+adminskin+'/admin_top_logo.gif')
+// 		 $('link').each(function()
+// 		 {
+// 			 if($(this).attr('href').match(/style.css$/))
+// 			 {
+// 				 $(this).attr('href',csshref);
+// 			 }
+// 		 });
+// 		 $(this).children('div').attr('class', 'sel');
+// 		 $(window.frames["menu"].document).find("link").each(function()
+// 		 {
+// 			 if($(this).attr('href').match(/style.css$/))
+// 			 {
+// 				 $(this).attr('href',csshref);
+// 			 }
+// 		 });
+// 		 $(window.frames["main"].document).find("link").each(function()
+// 		 {
+// 			 if($(this).attr('href').match(/style.css$/))
+// 			 {
+// 				 $(this).attr('href',csshref);
+// 			 }
+// 		 });
+// 		 $.get('index_body.php?dopost=setskin&cskin='+adminskin);
+// 	 });
+// })(jQuery);
 </script>
 </body>
 </html>

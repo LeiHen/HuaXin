@@ -89,6 +89,15 @@ else
     {
         WaterImg($fullfilename, 'up');
     }
+
+    // if(in_array($imgfile_type, $cfg_photo_typenames))
+    // {
+    //     if($needwatermark==1)
+    //     {
+    //         WaterImg($fullfilename, 'up');
+    //     }
+    // }
+
 }
 
 $info = '';
