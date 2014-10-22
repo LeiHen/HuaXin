@@ -25,8 +25,8 @@ function shrinkNav(){
 
 
 /**
-* @name     :
-* @author   :百度
+* @name		:
+* @author	:百度
 * @dependent:百度地图API
 */
 
@@ -124,7 +124,6 @@ function createIcon(json){
     return icon;
 }
 /* @end **/
-
 
 
 
