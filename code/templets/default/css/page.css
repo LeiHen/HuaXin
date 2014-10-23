@@ -16,6 +16,25 @@
 	transition:all 0.4s ease-out;
 }
 
+/* 语言导航 */
+.nav_language{
+	position: absolute;
+	right: 10%;
+}
+.nav_language li{
+	display: inline-block;
+	+display: inline;
+	+zoom: 1;
+	margin: 6px 0;
+}
+.nav_language li a{
+	display: block;
+	padding: 0 10px;
+	border-left:1px solid #fff; 
+}
+.nav_language li:first-child a{
+	border-left:none;
+}
 
 /*首页内容*/
 .content_index{
