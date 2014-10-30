@@ -46,6 +46,12 @@ img{border: none;}
 	+position: relative;
 	+top: -50%;
 	+left: -50%;
+	-webkti-transform:scale(1);
+	-moz-transform:scale(1);
+	-ms-transform:scale(1);
+	-o-transform:scale(1);
+	transform:scale(1);
+	/*display: block;*/
 }
 .nav .logo_wrap .logo:hover img{
 	/*width: 160px;*/
@@ -1085,7 +1091,7 @@ img{border: none;}
 	-o-transform:rotate(45deg);
 	transform:rotate(45deg);
 	   
-   filter: progid:DXImageTransform.Microsoft.Matrix(
+   filter:progid:DXImageTransform.Microsoft.Matrix(
             M11=0.7071067811865474,
             M12=-0.7071067811865477,
             M21=0.7071067811865477,
@@ -1118,7 +1124,7 @@ img{border: none;}
 	background:url(../images/about_rotate_672x492.jpg) no-repeat;
 	background-position: 0 0;
 	
-	filter: progid:DXImageTransform.Microsoft.Matrix(
+	filter:progid:DXImageTransform.Microsoft.Matrix(
 			M11=0.7071067811865483, 
 			M12=0.7071067811865467, 
 			M21=-0.7071067811865467, 
@@ -1333,7 +1339,73 @@ img{border: none;}
 }
 
 
+/* 分页 */
+.mod_page{
 
+}
+.mod_page{
+	/*color: #8a8a8a;*/
+	padding: 20px 0;
+	text-align: right;
+}
+.mod_page a{
+	color: #8a8a8a;
+	font-size: 2.4em;
+	padding: 4px 8px;
+	/*display: ;*/
+}
+.mod_page a span{
+	color: #8a8a8a;
+	display: inline-block;
+	+display: inline;
+	+zoom: 1;
+	line-height: 1em;
+	vertical-align: middle;
+}
+.mod_page a .icon_left,
+.mod_page a .icon_right{
+	font-size: 1.4em;
+	/*line-height: 1em;*/
+}
+
+
+
+
+.mod_page a:hover,
+.mod_page a:hover span,
+.mod_page .hover,
+.mod_page .hover_span{
+	color: #13aee4;
+}
+
+.mod_page a:active .icon_left{
+	-webkit-transform:translate(-3px,0);
+	-moz-transform:translate(-3px,0);
+	-ms-transform:translate(-3px,0);
+	-o-transform:translate(-3px,0);
+	transform:translate(-3px,0);
+}
+.mod_page a:active .icon_right{
+	-webkit-transform:translate(3px,0);
+	-moz-transform:translate(3px,0);
+	-ms-transform:translate(3px,0);
+	-o-transform:translate(3px,0);
+	transform:translate(3px,0);
+}
+
+
+.mod_page a,
+.mod_page a span,
+.mod_page .hover,
+.mod_page .hover_span,
+.mod_page a .icon_left,
+.mod_page a .icon_right{
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-ms-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	transition:all 0.4s ease-in-out;
+}
 
 
 /**/
