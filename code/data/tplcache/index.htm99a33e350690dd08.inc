@@ -33,9 +33,9 @@ $z[15]=Array("global","",9252,9284);
 $z[15][4]['name']="cfg_templets_skin";
 $z[16]=Array("global","",10085,10117);
 $z[16][4]['name']="cfg_templets_skin";
-$z[17]=Array("glbal","",11022,11053);
+$z[17]=Array("glbal","",11040,11071);
 $z[17][4]['name']="cfg_templets_skin";
-$z[18]=Array("include","",11842,11879);
+$z[18]=Array("include","",11860,11897);
 $z[18][4]['filename']="footer.htm";
 
 ?>

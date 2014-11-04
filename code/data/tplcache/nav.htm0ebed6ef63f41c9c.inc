@@ -5,7 +5,7 @@ $z[1]=Array("global","",326,351);
 $z[1][4]['name']="cfg_cmsurl";
 $z[2]=Array("global","",400,428);
 $z[2][4]['name']="cfg_indexname";
-$z[3]=Array("type","\r\n        <li><a href=\"[field:typeurl/]\"><span class=\"icon_shop\" title=\"[field:typename/]\"></span>[field:typename/]</a></li>\r\n        ",447,615);
+$z[3]=Array("type","\r\n        <li><a href=\"/ch/product.html\"><span class=\"icon_shop\" title=\"[field:typename/]\"></span>[field:typename/]</a></li>\r\n        ",447,615);
 $z[3][4]['typeid']="1";
 $z[4]=Array("type","\r\n        <li><a href=\"[field:typeurl/]\"><span class=\"icon_news\" title=\"[field:typename/]\"></span>[field:typename/]</a></li>\r\n        ",625,793);
 $z[4][4]['typeid']="2";

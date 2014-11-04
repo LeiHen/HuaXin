@@ -2,9 +2,9 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <title>{dede:global.cfg_webname/}</title>
-  <meta name="description" content="{dede:global.cfg_description/}" />
-  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:field.keywords/}" />
+  <meta name="keywords" content="{dede:field.description function='html2text(@me)'/}" />
   {dede:include filename="head_init.htm"/}
 
 </head>
@@ -13,7 +13,7 @@
 
 <!-- 头部[[ -->
 <header class="header header_sub news_head header_ext">
-   <h1 class="sub_title1">疑问解答</h1>
+   <h1 class="sub_title1">{dede:type typeid='2'}[field:typename /]{/dede:type}</h1>
    <h2 class="sub_title2">疑难问题，提出来，我们提供最新最佳的产品信息</h2>
 </header>
 <!-- 头部]] -->
@@ -21,74 +21,29 @@
 
 <!-- 内容[[ -->
 <div class="content news_content content_ext">
-    <div class="viewbox">
-  <div class="title">
-   <h2>{dede:field.title/}</h2>
-  </div>
-  <!-- /title -->
-  <div class="info"> <small>时间:</small>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}<small>来源:</small>{dede:field.source/} <small>作者:</small>{dede:field.writer/} <small>点击:</small>
-   <script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>
-   次</div>
-  <!-- /info -->
-  {dede:field.description runphp='yes'}
-  if(@me<>'' )@me = '
-  <div class="intro">'.@me.'</div>
-  ';
-  {/dede:field.description}
-  <div class="content">
-   <table width='100%'>
-    <tr>
-     <td><div id="contentMidPicAD" style="float:right; clear:both; top:0; vertical-align:top;">{dede:myad name='contentMidPicAD'/}</div>
-      {dede:field.body/}
-      {dede:field.vote/}
-      (责任编辑：{dede:adminname/})</td>
-    </tr>
-   </table>
-  </div>
-  <!-- /content -->
-  <div class="dede_pages">
-   <ul class="pagelist">
-    {dede:pagebreak/}
-   </ul>
-  </div>
-  <!-- /pages -->
-  <!-- //顶踩 -->
-  <div class="newdigg" id="newdigg">
-   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',{dede:field.id/})">
-    <div class="digg_act">顶一下</div>
-    <div class="digg_num">({dede:field.goodpost/})</div>
-    <div class="digg_percent">
-     <div class="digg_percent_bar"><span style="width:{dede:field.goodper/}%"></span></div>
-     <div class="digg_percent_num">{dede:field.goodper/}%</div>
-    </div>
-   </div>
-   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',{dede:field.id/})">
-    <div class="digg_act">踩一下</div>
-    <div class="digg_num">({dede:field.badpost/})</div>
-    <div class="digg_percent">
-     <div class="digg_percent_bar"><span style="width:{dede:field.badper/}%"></span></div>
-     <div class="digg_percent_num">{dede:field.badper/}%</div>
-    </div>
-   </div>
-  </div>
-  <script language="javascript" type="text/javascript">getDigg({dede:field.id/});</script>
-  <!-- //顶踩部份的源码结束 -->
-  <!-- //分享代码开始 -->
-  {dede:bshare/}
-  <!-- //分享代码结束 -->
-  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
-  <div class="handle">
-   <div class="context">
-    <ul>
-     <li>{dede:prenext get='pre'/}</li>
-     <li>{dede:prenext get='next'/}</li>
-    </ul>
-   </div>
 
-  </div>
-  <!-- /handle -->
- </div>
-   
+    <div class="news_detail_content">
+       <p class="type_title">{dede:field.typename/}</p>
+       <h1 class="title">{dede:field.title/}</h1>
+       <p class="info">
+           <time class="time">{dede:field.pubdate function="MyDate('Y年m月d日 ',@me)"/}</time>
+           <span class="author">{dede:adminname/}</span>
+       </p>
+       <div class="news_detail_content">
+           {dede:field.body/}
+       </div>
+
+       <ul class="prenext">
+          <li>{dede:prenext get='pre'/}</li>
+          <li>{dede:prenext get='next'/}</li>
+<!--
+           <li><a href="#" title="小红和小明是同班同学吗？">上一篇：小红和小明是同班同学吗？</a></li>
+           <li><a href="#" title="仙剑四出电视剧">下一篇：仙剑四出电视剧</a></li>
+-->
+       </ul>
+
+    </div>
+
 </div>
 <!-- 内容]] -->
 

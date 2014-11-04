@@ -2,9 +2,9 @@
 <html>
   <head>
   <meta charset="utf-8">
-  <title>{dede:global.cfg_webname/}</title>
-  <meta name="description" content="{dede:global.cfg_description/}" />
-  <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+  <title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+  <meta name="description" content="{dede:field.keywords/}" />
+  <meta name="keywords" content="{dede:field.description function='html2text(@me)'/}" />
   {dede:include filename="head_init.htm"/}
 
 </head>
@@ -13,7 +13,7 @@
 
 <!-- 头部[[ -->
 <header class="header header_sub news_head header_ext">
-   <h1 class="sub_title1">疑问解答</h1>
+   <h1 class="sub_title1">{dede:type typeid='2'}[field:typename /]{/dede:type}</h1>
    <h2 class="sub_title2">疑难问题，提出来，我们提供最新最佳的产品信息</h2>
 </header>
 <!-- 头部]] -->
@@ -33,7 +33,7 @@
    
    <div class="news_info">
        <ul class="news_detail block">
-          {dede:arclist row="10" typeid="5"}
+          {dede:arclist typeid='5' row='10'}
           <li class="news_list">
              <time class="time">[field:pubdate function=MyDate('y-m-d',@me)/]</time>
              <h1 class="title">[field:title/]</h1>
@@ -42,14 +42,27 @@
           </li>
           {/dede:arclist}
 
-            <li class="news_page">
+
+
+          <!--   <li class="news_page">
                 <a href="#"><span class="icon_left"></span></a>
                 <a href="#"><span class="icon_right"></span></a>
-            </li>
+            </li> -->
+
+
+           <!--  <li class="mod_page">
+                <a href="#" ><span class="icon_left"></span></a>
+                <a href="#" class="hover">1</a>
+                <a href="#">2</a>
+                <a href="#"><span class="icon_right"></span></a>
+            </li> -->
+            {dede:pagelist listitem='info,pre,next' listsize='5' typeid='5'/}
+            {dede:page pagesize="10"/}
+
        </ul>
        
        <ul class="news_detail">
-            {dede:arclist row="10" typeid="6"}
+            {dede:arclist typeid="6" row='10'}
             <li class="news_list">
                <time class="time">[field:pubdate function=MyDate('y-m-d',@me)/]</time>
                <h1 class="title">[field:title/]</h1>
@@ -57,11 +70,16 @@
                <span class="line_bottom"></span>
             </li>
             {/dede:arclist}
-            
-            <li class="news_page">
-                <a href="#"><span class="icon_left"></span></a>
+            {dede:pagelist listitem='info,pre,next' listsize='5' typeid='6'/}
+            {dede:page pagesize="10" typeid='6'/}
+            <!-- <li class="mod_page">
+                <a href="#" ><span class="icon_left"></span></a>
+                <a href="#" class="hover">1</a>
+                <a href="#">2</a>
                 <a href="#"><span class="icon_right"></span></a>
-            </li>
+            </li> -->
+            
+            
        </ul>
 
    </div>
