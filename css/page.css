@@ -896,13 +896,13 @@
 	line-height: 1em;
 	position: relative;
 	/*height: 16px;*/
-	line-height: 16px;
-	background-color: red;
-
+	/*line-height: 16px;*/
+	
+	overflow: hidden;
 }
 .about_content .about_l .title_3 .line{
 	display:block;
-	float: left;
+	/*float: left;*/
 	/*display: table;*/
 	/*display: block;*/
 	height: 1px;
@@ -910,17 +910,25 @@
 	/*margin: 7px 0;*/
 	background-color: #b1b1b1;
 	width: 100px;
-	line-height: 16px;
+	position: absolute;
+	right: 110%;
+	width: 1000%;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	/*line-height: 16px;*/
 }
 .about_content .about_l .title_3 .txt{
 	/*display: inline-block;*/
-	float: left;
+	/*float: left;*/
 	/*font-size: 1.6em;*/
 	/*line-height: 1em;*/
 	display:block;
+	float: right;
+	/*background-color: red;*/
 	/*line-height: 1em;*/
-	/*position: relative;*/
-	height: 16px;
+	position: relative;
+	/*height: 16px;*/
 }
 
 /*.about_content .about_l .retail{
